@@ -10,7 +10,10 @@
 
 	function mautic_init() {
 
-		elgg_extend_view('page/elements/foot','mautic/mautic');
+		//add the moment, only track logged in users
+        if (elgg_is_logged_in()) {
+        elgg_extend_view('page/elements/foot','mautic/mautic');
+        }
 		
 	}
 
